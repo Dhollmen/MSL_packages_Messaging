@@ -494,7 +494,7 @@ public abstract class PhoneUtils {
                 }
                 return phoneNumber;
             }
-            LogUtil.w(TAG, "PhoneUtils.getSelfRawNumber: subInfo is null for " + mSubId);
+            //LogUtil.w(TAG, "PhoneUtils.getSelfRawNumber: subInfo is null for " + mSubId);
             throw new IllegalStateException("No active subscription");
         }
 

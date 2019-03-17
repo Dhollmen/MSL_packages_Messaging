@@ -79,8 +79,8 @@ public class BugleApplication extends Application implements UncaughtExceptionHa
         if (!sRunningTests) {
             // Only create the factory if not running tests
             FactoryImpl.register(getApplicationContext(), this);
-        } else {
-            LogUtil.e(TAG, "BugleApplication.onCreate: FactoryImpl.register skipped for test run");
+        //} else {
+        //    LogUtil.e(TAG, "BugleApplication.onCreate: FactoryImpl.register skipped for test run");
         }
 
         sSystemUncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
@@ -174,9 +174,9 @@ public class BugleApplication extends Application implements UncaughtExceptionHa
     public void onLowMemory() {
         super.onLowMemory();
 
-        if (LogUtil.isLoggable(TAG, LogUtil.DEBUG)) {
-            LogUtil.d(TAG, "BugleApplication.onLowMemory");
-        }
+        //if (LogUtil.isLoggable(TAG, LogUtil.DEBUG)) {
+        //    LogUtil.d(TAG, "BugleApplication.onLowMemory");
+        //}
         Factory.get().reclaimMemory();
     }
 
@@ -184,7 +184,7 @@ public class BugleApplication extends Application implements UncaughtExceptionHa
     public void uncaughtException(final Thread thread, final Throwable ex) {
         final boolean background = getMainLooper().getThread() != thread;
         if (background) {
-            LogUtil.e(TAG, "Uncaught exception in background thread " + thread, ex);
+            //LogUtil.e(TAG, "Uncaught exception in background thread " + thread, ex);
 
             final Handler handler = new Handler(getMainLooper());
             handler.post(new Runnable() {

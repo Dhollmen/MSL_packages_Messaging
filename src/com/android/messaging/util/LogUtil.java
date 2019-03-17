@@ -29,9 +29,9 @@ public class LogUtil {
     public static final String BUGLE_NOTIFICATIONS_TAG = "MessagingAppNotif";
     public static final String BUGLE_WIDGET_TAG = "MessagingAppWidget";
 
-    public static final int DEBUG = android.util.Log.DEBUG;
-    public static final int WARN = android.util.Log.WARN;
-    public static final int VERBOSE = android.util.Log.VERBOSE;
+    public static final int DEBUG = 0; //android.util.Log.DEBUG;
+    public static final int WARN = 0;  //android.util.Log.WARN;
+    public static final int VERBOSE = 0; //android.util.Log.VERBOSE;
     public static final int INFO = android.util.Log.INFO;
     public static final int ERROR = android.util.Log.ERROR;
 

@@ -202,7 +202,7 @@ class FactoryImpl extends Factory {
                 subId = SmsManager.getDefaultSmsSubscriptionId();
             }
             if (subId < 0) {
-                LogUtil.w(LogUtil.BUGLE_TAG, "PhoneUtils.getForLMR1(): invalid subId = " + subId);
+                //LogUtil.w(LogUtil.BUGLE_TAG, "PhoneUtils.getForLMR1(): invalid subId = " + subId);
                 subId = ParticipantData.DEFAULT_SELF_SUB_ID;
             }
             PhoneUtils instance = sPhoneUtilsInstanceCacheLMR1.get(subId);
